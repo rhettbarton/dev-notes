@@ -23,7 +23,7 @@
 
 ## Oh My ZSH
   - ZSH (Z-Shell) is a "superset" of bash
-  - Oh My ZSH - a framework for working with ZSH (intalling plugins, configuration, etc.)
+  - Oh My ZSH - a framework for working with ZSH (installing plugins, configuration, etc.)
   - Cheatsheet:
 ````shell
 # update apt-get so it will install the most up-to-date versions of packages
