@@ -2,7 +2,11 @@
   - Text Editor with built-in terminal
   - Open Terminal shortcut: `Ctrl + ~`
   - You can open VS Code using the `code` command from the terminal
-  
+  - Extensions:
+    - Markdown All in One
+    - WSL
+  - [Linux Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
+  - [Windows Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 ## Ubuntu (or other Linux OS)
   - Install WSL on Windows (Windows 10 or later):
     - Powershell > Run as Administrator > `wsl --list --online` > `wsl --install -d <Distro>`
@@ -24,6 +28,7 @@
 ## Oh My ZSH
   - ZSH (Z-Shell) is a "superset" of bash
   - Oh My ZSH - a framework for working with ZSH (installing plugins, configuration, etc.)
+  - `zsh` - restart terminal
   - Cheatsheet:
 ````shell
 # update apt-get so it will install the most up-to-date versions of packages
@@ -56,3 +61,34 @@ sed -i 's/\(^plugins=([^)]*\)/\1 python pip pyenv virtualenv web-search zsh-auto
 sed -i 's/_THEME=\".*\"/_THEME=\"bira\"/g' "$HOME/.zshrc"
 
 ````
+
+## PyEnv/Python
+See current version: `python3 --version`
+
+### Install [pyenv](https://github.com/pyenv/pyenv):
+  - `curl https://pyenv.run | bash`
+  - Terminal output: Add these lines to `~/.zshrc`:
+```shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+```
+
+### Install python versions using pyenv:
+  - Check installed versions: `pyenv versions`
+  - See all versions available for install: `pyenv install --list`
+  - Install a selected version: `pyenv install <version>`
+    - Possible error: ```shell configure: error: no acceptable C compiler found in $PATH```
+    - Resolution: [PyEnv Wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment) - replace `apt` with `apt-get`:
+```shell
+sudo apt-get update
+sudo apt-get install \
+    build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev curl git \
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+    libffi-dev liblzma-dev
+```
+### Switch between versions using pyenv:
+  - Check installed versions: `pyenv versions`
+  - Set Python version for current terminal: `pyenv shell <version>`
+  - Set Python version globally: `pyenv global <version>`
