@@ -92,3 +92,15 @@ sudo apt-get install \
   - Check installed versions: `pyenv versions`
   - Set Python version for current terminal: `pyenv shell <version>`
   - Set Python version globally: `pyenv global <version>`
+
+## AWS CLI
+  - Google the installation instructions
+  - Check version of AWS CLI: `aws --version` 
+    - Should have at least major version 2
+  - Validate your credentials: `aws sts get-caller-identity`
+  - Configure credentials: `aws configure`
+      - AWS Access Key ID / AWS Secret Access Key
+        - Create Access Key Pair: IAM > Users > user > Create access key > Command Line Interface (CLI)
+      - Default region name: us-west-2
+      - Potential error: `An error occurred (SignatureDoesNotMatch) when calling the GetCallerIdentity operation: Signature expired: 20230822T072529Z is now earlier than 20230822T193257Z (20230822T194757Z - 15 min.)`
+        - Resolution: Check date using `date`. If the date is incorrect, run `sudo hwclock -s`
