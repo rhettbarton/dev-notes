@@ -104,3 +104,7 @@ sudo apt-get install \
       - Default region name: us-west-2
       - Potential error: `An error occurred (SignatureDoesNotMatch) when calling the GetCallerIdentity operation: Signature expired: 20230822T072529Z is now earlier than 20230822T193257Z (20230822T194757Z - 15 min.)`
         - Resolution: Check date using `date`. If the date is incorrect, run `sudo hwclock -s`
+    - Configs/credentials are stored in `~/.aws`
+      - Additional *profiles* can be added here
+        - Don't let your *default* profile have admin access
+        - Configure new profile programatically: `aws configure --profile <profile-name>`
