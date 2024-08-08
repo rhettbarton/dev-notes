@@ -62,6 +62,9 @@ sed -i 's/_THEME=\".*\"/_THEME=\"bira\"/g' "$HOME/.zshrc"
 
 ````
 
+- Add to ~/.zshrc:
+  - `sudo hwclock -s` (forces WSL clock to stay in-sync with system clock)
+
 ## PyEnv/Python
 See current version: `python3 --version`
 

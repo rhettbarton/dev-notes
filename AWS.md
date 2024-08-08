@@ -14,6 +14,8 @@
   - Make the access portal url nicer:
     - IAM Identity Center > Setting > Identity Source > Actions > Customize AWS access portal URL
 
+
+
 ## AWS CLI
 
 See [AWS CLI](Environment%20and%20Terminal.md#AWS-CLI)
@@ -31,4 +33,5 @@ See [AWS CLI](Environment%20and%20Terminal.md#AWS-CLI)
 - Login: `aws sso login --profile personal`
 - Switch roles: `aws configure sso --profile personal`
 
+## Misc
 - Can use ["Multi-Account Containers" via Firefox](https://www.youtube.com/watch?v=mgoVhOW3Qfc) to sign into multiple accounts at the same time.
