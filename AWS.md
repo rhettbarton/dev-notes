@@ -26,7 +26,7 @@ See [AWS CLI](Environment%20and%20Terminal.md#AWS-CLI)
 - CLI First: `aws configure sso --profile personal`
   - SSO session name (Recommended): personal
   - SSO start URL [None]: https://rhett.awsapps.com/start/
-  - SSO region [None]: us-east-1 
+  - SSO region [None]: us-west-2
     - Should be wherever IAM Identity Center is enabled
   - Validate using `aws sts get-caller-identity -- personal`
 - Name profiles the same thing across team
