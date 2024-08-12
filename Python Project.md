@@ -10,3 +10,38 @@
     - e.g. `make test` - runs all unit tests
     - e.g. `make lint` - uses precommit to executing liniting hooks
       - needs pre-commit: `sudo apt-get update -y && sudo apt-get install pre-commit` and restart terminal
+
+
+## Testing
+
+- VS Code Test Explorer
+  - Run and Debug > create a launch.json file > Python file > add purpose and env parameters 
+  - (VS Code Testing Setup)[https://code.visualstudio.com/docs/python/testing]
+  - settings.json
+    ```json
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "editor.formatOnSave": true,
+    "testing.defaultGutterClickAction": "debug",
+    ```
+  - launch.json
+    ```json 
+        "configurations": [
+            {
+                "name": "Python Debugger: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "purpose": [
+                    "debug-test",
+                ],
+                "console": "integratedTerminal",
+                "env": {
+                    "AWS_PROFILE": "cloud-course"
+                }
+            }
+        ]
+    ```
