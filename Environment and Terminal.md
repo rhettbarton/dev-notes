@@ -143,6 +143,8 @@
   # Deactivate the virtual environment
   deactivate
   ```
+  Check which python virtual enviornment you are currently using: `which python`
+
 
   ## AWS CLI
 
