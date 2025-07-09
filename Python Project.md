@@ -55,3 +55,8 @@
 - localstack.cloud
 - Better for complex use-cases (compared to moto)
 - some features are paid
+
+
+### Managing Settings (Configuration)
+- [Pydantic BaseSettings Docs](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)
+- [FastAPI Guide to Manage Settings](https://fastapi.tiangolo.com/advanced/settings/)
