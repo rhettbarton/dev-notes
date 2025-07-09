@@ -156,6 +156,9 @@
   - Configure your credentials by running `aws configure`. Provide your AWS Access Key ID, AWS Secret Access Key, and default region name.
     - To create an Access Key Pair, go to IAM > Users > user > Create access key > Command Line Interface (CLI).
   - The AWS CLI configurations and credentials are stored in `~/.aws`. You can add additional profiles for different AWS accounts by editing the configuration file.
-    - Avoid giving admin access to the *default* profile.
+    - Don't admin access to the *default* profile. Recommend not having a default profile at all.
     - To configure a new profile programmatically, run `aws configure --profile <profile-name>`.
+    - To configure a new profile programmatically using SSO (recommended), run `aws configure sso --profile <profile-name>`.
+    - To log into an existing profile, run `aws sso login --profile <profile-name>`.
+    - Once you have SSO set up, remove Access Key information from config files.
 
